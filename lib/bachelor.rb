@@ -2,7 +2,7 @@ def get_first_name_of_season_winner(data, season)
   winner = nil
   data.each do |seas, array|
     if  seas == season
-      array.each do |contestant|
+      array.collect do |contestant|
           if contestant[:status] == "Winner"
             winner = contestant[:name].split[0]
           end
