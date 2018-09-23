@@ -4,7 +4,7 @@ def get_first_name_of_season_winner(data, season)
     if  seas == season
       attributes.collect do |attributes, status|
           if status == "Winner"
-            winner = attributes[:name].split[0]
+            winner ||= attributes[:name].split[0]
           end
       end
     end
