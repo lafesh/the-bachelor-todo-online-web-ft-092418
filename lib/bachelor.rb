@@ -3,7 +3,7 @@ def get_first_name_of_season_winner(data, season)
       if attributes == [:status]
         attributes.collect do |attributes, status|
           if status == "Winner"
-            puts season[:status][:name].zip(" ")
+            season[:status][:name].zip(" ")
           end
         end
       end
@@ -11,7 +11,9 @@ def get_first_name_of_season_winner(data, season)
 end
 
 def get_contestant_name(data, occupation)
-  # code here
+  if data[:season][:occupation] == occupation
+    data[:season][:name]
+  end 
 end
 
 def count_contestants_by_hometown(data, hometown)
