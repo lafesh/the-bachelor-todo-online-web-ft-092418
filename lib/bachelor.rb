@@ -1,10 +1,9 @@
 def get_first_name_of_season_winner(data, season)
   data.each do |season, attributes|
       if attributes == [:status]
-        attributes.collect do |attributes, status|
-          if status == "Winner"
-            season[:status][:name].zip(" ")
-          end
+        attributes.select do |attributes, status|
+          status == "Winner"
+          season[:status][:name].zip(" ")
         end
       end
   end
