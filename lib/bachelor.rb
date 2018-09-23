@@ -1,5 +1,5 @@
 def get_first_name_of_season_winner(data, season)
-  winner = []
+  winner = nil
   data.each do |seas, array|
     if  seas == season
       array.each do |contestant|
