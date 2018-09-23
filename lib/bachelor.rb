@@ -4,12 +4,12 @@ def get_first_name_of_season_winner(data, season)
     if  seas == season
       array.each do |contestant|
           if contestant[:status] == "Winner"
-            winner = contestant[:name].split[0]
+            contestant[:name].split[0]
           end
       end
     end
   end
-  winner
+  
 end
 
 def get_contestant_name(data, occupation)
