@@ -1,6 +1,7 @@
 def get_first_name_of_season_winner(data, season)
-  data.each do |season, attributes|
-      if attributes == [:status]
+  winner = nil
+  data.each do |seas, attributes|
+      if  seas == season
         attributes.select do |attributes, status|
           status == "Winner"
           
